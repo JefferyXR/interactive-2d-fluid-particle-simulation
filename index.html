@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fluid Particle Simulation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="controls">
+    <label>
+      Particles:
+      <input type="number" id="particleCount" value="800" min="100" max="2000" step="100">
+    </label>
+
+    <label>
+      Size:
+      <input type="number" id="particleSize" value="11" min="5" max="30">
+    </label>
+
+    <label>
+      Gravity:
+      <select id="gravityDirection">
+        <option value="down" selected>Down</option>
+        <option value="up">Up</option>
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+      </select>
+    </label>
+
+    <!-- Repulsion toggle -->
+    <label class="switch-label">
+      Repulsion:
+      <label class="switch">
+        <input type="checkbox" id="repulsionToggle">
+        <span class="slider"></span>
+      </label>
+      <span id="repulsionModeLabel">Click</span>
+    </label>
+  </div>
+
+  <canvas id="water-canvas"></canvas>
+  <script src="js/main.js"></script>
+</body>
+</html>
