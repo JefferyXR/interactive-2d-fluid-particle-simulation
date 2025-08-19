@@ -31,17 +31,6 @@ const interaction = 0.15;
 const slothStrength = 0.03;
 const maxSpeed = 10;
 
-// Scroll interaction
-let lastScroll = window.scrollY;
-window.addEventListener('scroll', () => {
-  const scrollAccel = window.scrollY - lastScroll;
-  lastScroll = window.scrollY;
-
-  particles.forEach(p => { 
-    p.vy += -scrollAccel * 0.3;
-    p.vx += (-scrollAccel * 0.5) * (Math.random() - 0.5);
-  });
-});
 
 // Repulsion
 const repulsionRadius = 100;
